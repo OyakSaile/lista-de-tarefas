@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
+:root {
+  --primary-color: #ea5959;
+  --second-color: #6c6d6d;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Varela", sans-serif;
+  background: #ebeaea;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.second-color {
+  color: var(--second-color);
+}

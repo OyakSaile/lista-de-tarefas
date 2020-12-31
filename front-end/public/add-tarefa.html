@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar ">
+            <div class="user-info">
+                <div id="imguser">
+                    <img src="./imgs/images/user-image.png" alt="">
+                </div>
+                <p id="username"><span class="primary-color">Kayo Elias</span></p>
+                <p id="user-detail">Desenvolvedor</p>
+            </div>
+
+
+            <nav class="menu-sidebar">
+                <ul>
+                    <li><span><img src="./imgs/icons/home.svg" alt=""></span><a href="">Home</a></li>
+                    <li><span><img src="./imgs/icons/tasks.svg" alt=""></span><a href="">Tarefas</a></li>
+                    <li><span><img src="./imgs/icons/comments.svg" alt=""></span><a href="">Mensagens</a></li>
+                    <li><span><img src="./imgs/icons/profile.svg" alt=""></span><a href="">Meu Perfil</a></li>
+                    <li><span><img src="./imgs/icons/config.svg" alt=""></span><a href="">Configurações</a></li>
+                </ul>
+            </nav>
+
+        
+            <div class="logout">
+                <a href="">Sair da conta</a>
+                <a href=""><img src="./imgs/icons/logout.svg" alt=""></a>
+            </div>
+            
+        </div>
+
+        <div class="main-box">
+              <div class="content-main">
+                  <div class="tt-main">
+                      <h3 class="primary-color">Adicione uma Tarefa</h3>
+                      <p class="second-color">Preencha o formulário com as informações da tarefa</p>
+                  </div>
+                  <div class="add-todo">
+                      <form action="" class="form">
+                           <div class="input-block">
+                               <label for="taskname" class="primary-color">Nome da tarefa:</label>
+                               <input type="text" placeholder="Ex: Cozinhar">
+                           </div>
+                           <div class="input-block">
+                            <label for="description" class="primary-color">Data de inicío</label>
+                            <input type="text" placeholder="Ex: 02/03/2021">
+                        </div>
+                        <div class="input-block">
+                            <label for="" class="primary-color">E-mail para notificação</label>
+                            <input type="text" placeholder="Ex: lembrete@gmail.com">
+                        </div>
+                        <div class="input-block">
+                            <label for="" class="primary-color">Descrição da tarefa</label>
+                            <input type="text" placeholder="Ex: Cozinharei pois minha tia vai sair.">
+                        </div>
+                    
+                        <div class="input-block">
+                            <label for="" class="primary-color">Data de termino</label>
+                            <input type="text" placeholder="Ex: 02/06/2021">
+                        </div>
+                        </form>
+
+                        <div class="select">
+                            <h3 class="primary-color">Selecione uma categoria</h3>
+                            <div class="icons-select">
+                                <div class="icon">
+                                    <span> <img src="./imgs/icons/house.svg" alt=""></span>
+                                    <a href="">Casa</a>
+                                </div>
+                                <div class="icon">
+                                    <span> <img src="./imgs/icons/school.svg" alt=""></span>
+                                    <a href="">Escola</a>
+                                </div>
+                                <div class="icon">
+                                    <span> <img src="./imgs/icons/job.svg" alt=""></span>
+                                    <a href="">Trabalho</a>
+                                </div>
+                                <div class="icon">
+                                    <a href="">Outro..</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="add-todo-btn">
+                            <a href="">
+                                <img src="./imgs//icons/add.svg" alt="Adicionar Tarefa" title="Adicionar Tarefa">
+                            </a>
+              
+                        </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+</body>
+</html>

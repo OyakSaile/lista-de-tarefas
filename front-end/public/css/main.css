@@ -1,0 +1,167 @@
+.container {
+  display: flex;
+}
+.sidebar {
+  width: 20vw;
+  background: #fefefe;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-info {
+  margin-top: 2rem;
+}
+
+.user-detail {
+  color: var(--second-color);
+}
+
+.menu-sidebar {
+  text-align: left;
+}
+.menu-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+}
+
+.menu-sidebar ul li {
+  list-style: none;
+  color: var(--second-color);
+  display: flex;
+  gap: 1.3rem;
+  margin: 0.4rem 0;
+  transition: 0.5s;
+}
+
+.menu-sidebar ul li:hover {
+  transform: scale(1.3);
+}
+.menu-sidebar ul li a,
+.logout a {
+  text-decoration: none;
+}
+.menu-sidebar ul li a {
+  color: var(--second-color);
+  font-size: 1.1rem;
+  text-align: left !important;
+  flex: 1;
+}
+.menu-sidebar ul li:hover a {
+  color: var(--primary-color);
+}
+
+.menu-sidebar ul li span img {
+  width: 1.8rem;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.logout a {
+  margin: 0 1rem;
+  color: var(--second-color);
+}
+
+.logout img {
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  flex: 1;
+}
+
+/* MAIN  CONTENT */
+
+.main-box {
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+  position: relative;
+}
+
+.content-main {
+  width: 70vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tt-main h3 {
+  font-size: 2rem;
+  margin-top: 1.4rem;
+}
+.tt-main p {
+  font-size: 1.2rem;
+}
+
+/* FORMULARIO */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  grid-gap: 1.2rem;
+  margin-top: 4rem;
+}
+
+.input-block {
+  text-align: left;
+}
+.input-block input {
+  display: block;
+  border: 0;
+  border-bottom: 2px solid var(--primary-color);
+  background-color: transparent;
+  width: 100%;
+  padding: 8px 10px;
+}
+.input-block input::placeholder {
+  text-align: left;
+}
+.select {
+  margin-top: 1.5rem;
+}
+
+.select h3 {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.icons-select {
+  text-align: left;
+}
+.icons-select .icon {
+  text-align: left;
+  margin: 0.8rem 0;
+}
+
+.icons-select .icon a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--second-color);
+  transition: 0.5s;
+}
+
+.icons-select .icon a:hover {
+  color: var(--primary-color);
+  transform: scale(1.3);
+}
+
+/* ADICIOANR TO-DO */
+.add-todo-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
