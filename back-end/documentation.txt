@@ -1,5 +1,5 @@
 # coding: utf-8
-# Auth: Mauricio Costa e Kaio Elias
+# Auth: Mauricio Costa e Kayo Elias
 # Simple program of to do list
 
 Esta aplicação foi construída com as tecnologias Python 3.8 e Django 3.1, tem o objetivo de por em
