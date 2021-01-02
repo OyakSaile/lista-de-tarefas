@@ -1,9 +1,0 @@
-# coding: utf-8
-# Auth: Mauricio Costa e Kayo Elias
-# Simple program of to do list
-
-Esta aplicação foi construída com as tecnologias Python 3.8 e Django 3.1, tem o objetivo de por em
-prática conhecimentos e trabalho em grupo.
-
-v1 - Conta com as simples funcionalidades de criar, remover e editar listas. Não contem um vículo da
-lista com usuário.
