@@ -1,5 +1,5 @@
 from django import forms
-from .models import Items, ListItems
+from .models import Items
 
 
 class ItemsForms(forms.ModelForm):

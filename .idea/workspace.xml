@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e8caf1-f113-4504-8fe2-a36be85134bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/to_do_list/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/to_do_list/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/documentation.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/manager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/manager/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/manager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/to_do_list/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/public/add-tarefa.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/templates/add-tarefa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/public/templates/add-tarefa.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/templates/add-tarefa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_do_list/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_do_list/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

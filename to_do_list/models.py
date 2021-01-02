@@ -13,3 +13,12 @@ class ListItems(models.Model):
     status = models.BooleanField(default=False)
     item_fk = models.ForeignKey(Items, on_delete=models.CASCADE)
     # id_user = models.ForeignKey('auth.User',on_delete=models.CASCADE)
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=20)
+
+
+class ListCategory(models.Model):
+    category_fk = models.ForeignKey(Category, on_delete=models.CASCADE)
+    item_fk = models.ForeignKey(Items, on_delete=models.CASCADE)

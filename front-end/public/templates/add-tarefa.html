@@ -21,11 +21,11 @@
 
             <nav class="menu-sidebar">
                 <ul>
-                    <li><span><img src="./imgs/icons/home.svg" alt=""></span><a href="">Home</a></li>
-                    <li><span><img src="./imgs/icons/tasks.svg" alt=""></span><a href="">Tarefas</a></li>
-                    <li><span><img src="./imgs/icons/comments.svg" alt=""></span><a href="">Mensagens</a></li>
-                    <li><span><img src="./imgs/icons/profile.svg" alt=""></span><a href="">Meu Perfil</a></li>
-                    <li><span><img src="./imgs/icons/config.svg" alt=""></span><a href="">Configurações</a></li>
+                    <li><span><img src="{% static 'imgs/icons/home.svg'%}" alt=""></span><a href="">Home</a></li>
+                    <li><span><img src="{% static 'imgs/icons/tasks.svg'%}" alt=""></span><a href="">Tarefas</a></li>
+                    <li><span><img src="{% static 'imgs/icons/comments.svg'%}" alt=""></span><a href="">Mensagens</a></li>
+                    <li><span><img src="{% static 'imgs/icons/profile.svg'%}" alt=""></span><a href="">Meu Perfil</a></li>
+                    <li><span><img src="{% static 'imgs/icons/config.svg'%}" alt=""></span><a href="">Configurações</a></li>
                 </ul>
             </nav>
 
@@ -44,43 +44,55 @@
                       <p class="second-color">Preencha o formulário com as informações da tarefa</p>
                   </div>
                   <div class="add-todo">
-                      <form action="" class="form">
+                      <form id="id-form" class="form" method="POST">{% csrf_token %}  <!-- Form start-->
+                          {{ form.non_field_errors }}
+
                            <div class="input-block">
-                               <label for="taskname" class="primary-color">Nome da tarefa:</label>
-                               <input type="text" placeholder="Ex: Cozinhar">
+                                {{ form.subject.errors}}
+                               <label for="" class="primary-color">Nome da tarefa:</label>
+                               <input type="text" id="{{ form.subject.id_task_name}}" placeholder="Ex: Cozinhar" value="{{ current_name }}">
+                               {{ form.subject}}
                            </div>
                            <div class="input-block">
-                            <label for="description" class="primary-color">Data de inicío</label>
-                            <input type="text" placeholder="Ex: 02/03/2021">
-                        </div>
-                        <div class="input-block">
-                            <label for="" class="primary-color">E-mail para notificação</label>
-                            <input type="text" placeholder="Ex: lembrete@gmail.com">
-                        </div>
-                        <div class="input-block">
-                            <label for="" class="primary-color">Descrição da tarefa</label>
-                            <input type="text" placeholder="Ex: Cozinharei pois minha tia vai sair.">
-                        </div>
-                    
-                        <div class="input-block">
-                            <label for="" class="primary-color">Data de termino</label>
-                            <input type="text" placeholder="Ex: 02/06/2021">
-                        </div>
-                        </form>
+                               {{ form.subject.errors}}
+                                <label for="" class="primary-color">Data de inicío</label>
+                                <input type="date" id="{{ form.subject.id_dt_start}}" placeholder="Ex: 02/03/2021">
+                               {{ form.subject}}
+                            </div>
+                            <div class="input-block">
+                                {{ form.subject.errors}}
+                                <label for="" class="primary-color">E-mail para notificação</label>
+                                <input type="email" id="{{ form.subject.id_email}}" placeholder="Ex: lembrete@gmail.com" value="{{ current_name }}">
+                                {{ form.subject}}
+                            </div>
+                            <div class="input-block">
+                                {{ form.subject.errors}}
+                                <label for="" class="primary-color">Descrição da tarefa</label>
+                                <input type="text" id="{{ form.subject.id_task_description}}" placeholder="Ex: Cozinharei pois minha tia vai sair." value="{{ current_name }}">
+                                {{ form.subject}}
+                            </div>
+
+                            <div class="input-block">
+                                {{ form.subject.errors}}
+                                <label for="" class="primary-color">Data de termino</label>
+                                <input type="date" id="{{ form.subject.id_dt_end}}" placeholder="Ex: 02/06/2021">
+                                {{ form.subject}}
+                            </div>
+                        </form> <!-- Form end-->
 
                         <div class="select">
                             <h3 class="primary-color">Selecione uma categoria</h3>
                             <div class="icons-select">
                                 <div class="icon">
-                                    <span> <img src="./imgs/icons/house.svg" alt=""></span>
+                                    <span> <img src="{% static 'imgs/icons/house.svg'%}" alt=""></span>
                                     <a href="">Casa</a>
                                 </div>
                                 <div class="icon">
-                                    <span> <img src="./imgs/icons/school.svg" alt=""></span>
+                                    <span> <img src="{% static 'imgs/icons/school.svg'%}" alt=""></span>
                                     <a href="">Escola</a>
                                 </div>
                                 <div class="icon">
-                                    <span> <img src="./imgs/icons/job.svg" alt=""></span>
+                                    <span> <img src="{% static 'imgs/icons/job.svg'%}" alt=""></span>
                                     <a href="">Trabalho</a>
                                 </div>
                                 <div class="icon">
@@ -93,7 +105,7 @@
 
                         <div class="add-todo-btn">
                             <a href="">
-                                <img src="{% static 'imgs/icons/add.svg'%}" alt="Adicionar Tarefa" title="Adicionar Tarefa">
+                                <img onclick="post-form();" src="{% static 'imgs/icons/add.svg'%}" alt="Adicionar Tarefa" title="Adicionar Tarefa">
                             </a>
               
                         </div>
@@ -101,5 +113,10 @@
               </div>
         </div>
     </div>
+<script>
+    function post-form(){
+        document.getElementById("id-form").submit();
+    }
+</script>
 </body>
 </html>
