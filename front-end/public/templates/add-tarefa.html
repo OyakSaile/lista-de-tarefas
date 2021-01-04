@@ -44,39 +44,47 @@
                       <p class="second-color">Preencha o formulário com as informações da tarefa</p>
                   </div>
                   <div class="add-todo">
-                      <form id="id-form" class="form" method="POST">{% csrf_token %}  <!-- Form start-->
+                      <form id="id-form" class="form" action="" method="POST">{% csrf_token %}  <!-- Form start-->
                           {{ form.non_field_errors }}
 
                            <div class="input-block">
-                                {{ form.subject.errors}}
-                               <label for="" class="primary-color">Nome da tarefa:</label>
-                               <input type="text" id="{{ form.subject.id_task_name}}" placeholder="Ex: Cozinhar" value="{{ current_name }}">
-                               {{ form.subject}}
+                               {{ form.subject.errors }}
+                               <label for="{{ form.id_task_name }}" class="primary-color">Nome da tarefa:</label>
+                               <input type="text" id='{{ form.id_task_name }}' name="{{ form.task_name.html_name }}"
+                                      maxlength="120" placeholder="Ex: Cozinhar" required>
+                               {{ form.subject }}
                            </div>
+
                            <div class="input-block">
-                               {{ form.subject.errors}}
-                                <label for="" class="primary-color">Data de inicío</label>
-                                <input type="date" id="{{ form.subject.id_dt_start}}" placeholder="Ex: 02/03/2021">
-                               {{ form.subject}}
-                            </div>
-                            <div class="input-block">
-                                {{ form.subject.errors}}
-                                <label for="" class="primary-color">E-mail para notificação</label>
-                                <input type="email" id="{{ form.subject.id_email}}" placeholder="Ex: lembrete@gmail.com" value="{{ current_name }}">
-                                {{ form.subject}}
-                            </div>
-                            <div class="input-block">
-                                {{ form.subject.errors}}
-                                <label for="" class="primary-color">Descrição da tarefa</label>
-                                <input type="text" id="{{ form.subject.id_task_description}}" placeholder="Ex: Cozinharei pois minha tia vai sair." value="{{ current_name }}">
-                                {{ form.subject}}
+                               {{ form.subject.errors }}
+                               <label for="{{ form.id_dt_start }}" class="primary-color">Data de inicío</label>
+                               <input type="date" id='{{ form.id_dt_start }}' name="{{ form.dt_start.html_name }}"
+                                      required>
+                               {{ form.subject }}
                             </div>
 
                             <div class="input-block">
-                                {{ form.subject.errors}}
-                                <label for="" class="primary-color">Data de termino</label>
-                                <input type="date" id="{{ form.subject.id_dt_end}}" placeholder="Ex: 02/06/2021">
-                                {{ form.subject}}
+                                {{ form.sender.errors }}
+                                <label for="{{ form.id_emai }}" class="primary-color">E-mail para notificação</label>
+                                <input type="email" id='{{ form.id_emai }}' name="{{ form.emai.html_name }}"
+                                       maxlength="254" placeholder="Ex: alguem@gmail.com" required>
+                                {{ form.sender }}
+                            </div>
+
+                            <div class="input-block">
+                                {{ form.subject.errors }}
+                                <label for="{{ form.id_task_description }}" class="primary-color">Descrição da tarefa</label>
+                                <input type="text" id='{{ form.id_task_description }}' name="{{ form.task_description.html_name }}"
+                                       maxlength="1200" placeholder="Ex: irei cozinhar um arroz" required>
+                                {{ form.subject }}
+                            </div>
+
+                            <div class="input-block">
+                                {{ form.subject.errors }}
+                                <label for="{{ form.id_dt_end }}" class="primary-color">Data de término</label>
+                               <input type="date" id='{{ form.id_dt_end }}' name="{{ form.dt_end.html_name }}"
+                                      required>
+                                {{ form.subject }}
                             </div>
                         </form> <!-- Form end-->
 
@@ -105,7 +113,7 @@
 
                         <div class="add-todo-btn">
                             <a href="">
-                                <img onclick="post-form();" src="{% static 'imgs/icons/add.svg'%}" alt="Adicionar Tarefa" title="Adicionar Tarefa">
+                                <img onclick="document.getElementById('id-form').submit();" src="{% static 'imgs/icons/add.svg'%}" alt="Adicionar Tarefa" title="Adicionar Tarefa">
                             </a>
               
                         </div>
@@ -113,10 +121,5 @@
               </div>
         </div>
     </div>
-<script>
-    function post-form(){
-        document.getElementById("id-form").submit();
-    }
-</script>
 </body>
 </html>
