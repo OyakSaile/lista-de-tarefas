@@ -44,7 +44,7 @@
                       <p class="second-color">Preencha o formulário com as informações da tarefa</p>
                   </div>
                   <div class="add-todo">
-                      <form id="id-form" class="form" action="" method="POST">{% csrf_token %}  <!-- Form start-->
+                      <form id="id-form" class="form" action="index" method="POST">{% csrf_token %}  <!-- Form start-->
                           {{ form.non_field_errors }}
 
                            <div class="input-block">
