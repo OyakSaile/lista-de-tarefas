@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path, PurePath
+from dj_database_url import parse
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=(rjl_s$2k860%bfjg1-(!3gx^2mv6&6hp-5+*$8qam(hie-4g'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://lista-de-afazeres.herokuapp.com/"]
 
 
 # Application definition
@@ -76,12 +78,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'to_do_list',
-        'USERNAME': 'mauricio',
-        'PASSWORD': 'Bd_Connect',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': config('ENGINE'),
+        'NAME': config('NAME'),
+        'USERNAME': config('USERNAME'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        'PORT': config('PORT'),
     }
 }
 
@@ -126,3 +128,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     PurePath(BASE_DIR, 'front-end/public'),
 ]
+STATIC_ROOT = PurePath(BASE_DIR, 'staticfiles')

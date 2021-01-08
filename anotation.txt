@@ -1,0 +1,2 @@
+https://lista-de-afazeres.herokuapp.com/
+https://git.heroku.com/lista-de-afazeres.git
